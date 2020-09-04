@@ -1,0 +1,83 @@
+actions:
+- action_Dialogue_Complete
+- action_is_Cuisine_Available
+- action_is_Cuisine_Budget_Available
+- action_is_Location_Available
+- action_is_Location_Budget_Available
+- action_is_Location_Cuisine_Available
+- action_is_Location_Cuisine_Budget_Available
+- action_is_Price_Available
+- action_search_restaurants
+- action_send_email
+- action_validate_email
+- utter_ask_avg_budget
+- utter_ask_cuisine
+- utter_ask_email
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_email_bool
+- utter_goodbye
+- utter_greet
+- utter_mail_not_send
+- utter_text_not_relevant
+entities:
+- cuisine
+- email
+- location
+- price
+- price_class
+intents:
+- restaurant_search_details
+- goodbye
+- greet
+- email_affirm_no
+- email_affirm_yes
+- email_details
+- affirm
+- irrelevant_text
+- stop
+responses:
+  utter_ask_avg_budget:
+  - text: "What price range are you looking at?\n\n  1.Lesser than Rs.300\n  2.Rs.\
+      \ 300 to 700\n  3.More than 700"
+  utter_ask_cuisine:
+  - text: "What kind of cuisine would you prefer? \n\n  1.Chinese\n  2.Mexican\n \
+      \ 3.Italian\n  4.American\n  5.South Indian\n  6.North Indian"
+  utter_ask_email:
+  - text: Please enter your email address
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  - text: In which location you are looking for?
+  utter_default:
+  - text: I cannot understand
+  utter_email_bool:
+  - text: Do you want these details via email?
+  - text: Should I send you details of all the restaurants on email?
+  utter_goodbye:
+  - text: goodbye :)
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there! How may I help you?
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today
+  utter_mail_not_send:
+  - text: email not send , Bon apetite
+  utter_text_not_relevant:
+  - text: I'm not able to grasp meaning of your text.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  cuisine:
+    type: text
+  email:
+    type: text
+  location:
+    type: text
+  price:
+    type: text
+  price_class:
+    type: text
